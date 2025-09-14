@@ -1,0 +1,21 @@
+{% extends 'view/base.html' %}
+{% load static %}
+{% block content %}
+
+
+<div class="column">
+    {% for item in menu %}
+
+    <div class="menu-card">
+        <a href="#"><img class="menu-image" src="{{ item.image.url }}"></a>
+        <div class="menu-content">
+            <h3 class="menu-title">{{ item.title }}</h3>
+            <p class="menu-recipe">{{ item.recipe|truncatechars:100 }}</p>
+            <p class="rating">Рейтинг: {{ item.rating }}</p>
+        </div>
+
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

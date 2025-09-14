@@ -1,0 +1,39 @@
+{% extends 'view/base.html' %}
+{% load static %}
+{% block content %}
+
+
+<div class="center">
+    <h1 class="name_site">Изыски прошлого</h1>
+    <p class="bio">Ресторан традиционной русской кухни</p>
+</div>
+<footer>
+    <div class="Footer">
+        <div class="contact">
+            <h3>Информация</h3>
+            <p>Адрес: Россия, Воронеж, ул. Никитина, 25</p>
+            <p>Контактный номер: +7(495)123-45-67</p>
+            <div><p>Почта:</p> <a href="#">info@izyskiproshlogo.ru</a></div>
+
+        </div>
+        <div class="wrap">
+            <ul>
+                <li><a href="https://t.me/+ZkVWFWmI_483ZDNi"><img class="socialImg"
+                                                                  src="{% static 'images/telegram.png' %}">
+                    <p class="Social">Telegram</p></a>
+
+                </li>
+                <li><a href="https://www.youtube.com/@foodtop10"><img class="socialImg"
+                                                                      src="{% static 'images/Youtube.png' %}">
+                    <p class="Social">YouTube</p></a>
+
+                </li>
+                <li><a href=""><img class="socialImg" src="{% static 'images/vk.png' %}">
+                    <p class="Social">Вконтакте</p></a>
+
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
+{% endblock %}
