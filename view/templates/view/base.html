@@ -19,7 +19,11 @@
                     <li class="butt"><a href="">Заказать столик</a></li>
                     <li class="butt"><a href="{% url 'menu' %}">Меню</a></li>
                     <li class="butt"><a href="{% url 'personal' %}">Наш персонал</a></li>
+                    {% if user.is_authenticated %}
+                    <li class="butt"><a href="{% url 'logout' %}">Выход</a></li>
+                    {% else %}
                     <li class="butt"><a href="{% url 'signup' %}">Регистрация</a></li>
+                    {% endif %}
                 </ul>
             </div>
         </div>
