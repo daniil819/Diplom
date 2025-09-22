@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Menu, Personal
+# from .utils import paginate_projects
 
 
 def index(request):
@@ -14,4 +15,5 @@ def menu(request):
 
 def personal(request):
     personal_prof = Personal.objects.all()
+
     return render(request, 'view/personal.html', {"personal": personal_prof})

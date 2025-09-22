@@ -6,6 +6,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth import login, logout, authenticate
 from django.db import IntegrityError
 from django.contrib import messages
+import re
 
 
 def signup_user(request):
@@ -46,3 +47,6 @@ def login_user(request):
         else:
             login(request, user)
             return redirect('index')
+
+
+

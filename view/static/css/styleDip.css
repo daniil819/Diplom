@@ -195,6 +195,28 @@ body {
 .socialImg {
     justify-content: center;
     align-items: center;
+
+}
+
+/* Кнопки социалки */
+
+
+
+
+
+.social_butt {
+    background-color: rgb(0, 0, 0);
+    padding: 5px 5px;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.social_butt:hover {
+    background: rgb(0, 0, 0);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px white;
+    border-color: transparent;
 }
 
 /* Подвал контактная */
@@ -206,6 +228,7 @@ body {
     margin-left: 0;
     padding: 0 20px;
     box-sizing: border-box;
+    margin-bottom: 5px;
 
 }
 
@@ -221,21 +244,13 @@ body {
     font-size: 14px;
     transition: color 0.3s ease;
     display: block;
-    margin: 8px 0;
-    line-height: 1.4;
-}
 
-.contact ul {
-    list-style: none;
-    padding: 0;
+    line-height: 1.4;
+    display: inline;
     margin: 0;
 }
 
-.contact li {
-    margin: 10px 0;
-    padding: 0;
-    line-height: 1.4;
-}
+
 
 /* Меню еда */
 .column {

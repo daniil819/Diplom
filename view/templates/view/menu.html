@@ -2,7 +2,7 @@
 {% load static %}
 {% block content %}
 
-
+<div class="center_pers"><h1>Меню</h1></div>
 <div class="column">
     {% for item in menu %}
 
@@ -11,7 +11,7 @@
         <div class="menu-content">
             <h3 class="menu-title">{{ item.title }}</h3>
             <p class="menu-recipe">{{ item.recipe|truncatechars:100 }}</p>
-            <p class="rating">Рейтинг: {{ item.rating }}</p>
+            <p class="rating"><b>Цена:</b> {{ item.price }} ₽.</p>
         </div>
 
     </div>
