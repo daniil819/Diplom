@@ -20,11 +20,12 @@ def signup_user(request):
                 login(request, user)
                 return redirect('index')
             except IntegrityError:
-                return render(request, 'user/signup.html',
+                return render(request, 'user/singupuser.html',
                               {'form': UserCreationForm(),
                                'error': 'Такое имя пользователя уже существует. Задайте другое'})
         else:
-            return render(request, 'user/signupuser.html', {'form': UserCreationForm(), 'error': 'Пароли не совпадают'})
+            return render(request, 'user/singupuser.html',
+                          {'form': UserCreationForm(), 'error': 'Пароли не совпадают'})
 
 
 def logout_user(request):
@@ -47,6 +48,3 @@ def login_user(request):
         else:
             login(request, user)
             return redirect('index')
-
-
-

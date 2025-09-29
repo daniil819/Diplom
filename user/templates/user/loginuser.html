@@ -16,22 +16,14 @@
 
         <p class="rg">
             <label for="username">Имя пользователя:</label>
-            <input type="text" name="username" id="username" required>
+            <input type="text" name="username" id="username" value="{{ username }}" required>
         </p>
 
         <p class="rg">
-            <label for="password1">Пароль:</label>
-            <input type="password" name="password1" id="password1" required>
+            <label for="password">Пароль:</label>
+            <input type="password" name="password" id="password" required>
         </p>
-
-        <p class="rg">
-            <label for="password2">Подтверждение пароля:</label>
-            <input type="password" name="password2" id="password2" required>
-        </p>
-
         <button>Войти</button>
-
     </form>
 </div>
-
 {% endblock %}

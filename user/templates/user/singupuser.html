@@ -1,24 +1,26 @@
 {% extends 'view/base.html' %}
 {% load static %}
 {% block content %}
-
 <div class="container_rg">
 
     <form method="post" class="register">
         <h1 id="regist">Регистрация</h1>
-        <h3>{{ error }}</h3>
-        {% csrf_token %}
 
+        {% if error %}
+        <div class="error">
+            {{ error }}
+        </div>
+        {% endif %}
+
+        {% csrf_token %}
         <p class="rg">
             <label for="username">Имя пользователя:</label>
-            <input type="text" name="username" id="username" required>
+            <input type="text" name="username" id="username" value="{{ username }}" required>
         </p>
-
         <p class="rg">
             <label for="password1">Пароль:</label>
             <input type="password" name="password1" id="password1" required>
         </p>
-
         <p class="rg">
             <label for="password2">Подтверждение пароля:</label>
             <input type="password" name="password2" id="password2" required>
@@ -26,13 +28,12 @@
 
         <p class="rg">
             <label for="telefon">Номер телефона</label>
-            <input type="tel" id="telefon" placeholder="+7xxxxxxxxxx" required>
+            <input type="tel" name="telefon" id="telefon" placeholder="+7xxxxxxxxxx"> <!-- Добавлено name -->
         </p>
 
         <button>Зарегистрироваться</button>
 
     </form>
-    <div>Если уже есть аккаунт:<a href="{% url 'login' %}">login</a></div>
+    <div>Если уже есть аккаунт:<a href="{% url 'login' %}">Войти</a></div>
 </div>
-
 {% endblock %}

@@ -1,0 +1,40 @@
+{% extends 'view/base.html' %}
+{% load static %}
+{% block content %}
+
+
+<div class="dish-container">
+    <div class="dish-card">
+        <!-- Изображение блюда -->
+        <div class="dish-image-section">
+            <img class="dish-image" src="{{ menu_item.image.url }}" alt="{{ menu_item.title }}">
+        </div>
+
+        <!-- Информация о блюде -->
+        <div class="dish-info-section">
+            <h1 class="dish-title">{{ menu_item.title }}</h1>
+
+            <div class="dish-price">
+                Цена: {{ menu_item.price }} ₽
+            </div>
+
+            <div class="dish-details">
+                <div class="detail-group">
+                    <h3>Ингредиенты</h3>
+                    <p class="ingredients">{{ menu_item.ingredients }}</p>
+                </div>
+
+                <div class="detail-group">
+                    <h3>Рецепт</h3>
+                    <p class="recipe">{{ menu_item.recipe }}</p>
+                </div>
+            </div>
+
+            <div class="back-link">
+                <a href="{% url 'menu' %}">Вернуться к меню</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

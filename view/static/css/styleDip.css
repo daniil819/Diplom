@@ -269,34 +269,42 @@ body {
 
 .menu-card {
     background: white;
-    border-radius: 12px;
+    border-radius: 14px;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
     transition: all 0.3s ease;
     border: 1px solid #000000;
     position: relative;
+    max-width: 350px;
 }
-
-
 
 .menu-image {
     width: 100%;
-    height: 360px;
+    height: 280px;
     object-fit: cover;
-    display: flex;
     transition: transform 0.5s;
 }
 
 .menu-title {
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    font-size: 25px;
-    margin-top: 15px;
+    font-size: 24px;
+    margin: 18px 0;
+    text-align: center;
+    padding: 0 18px;
 }
 
 /* Персонал */
-.menu-name {
+.personal-card {
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    border: 1px solid #000000;
+    position: relative;
+    max-width: 350px;
+}
+
+.personal-name {
     align-items: start;
     justify-content: center;
     display: flex;
@@ -372,6 +380,9 @@ button {
 
 #regist {
     font-size: 50px;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
 }
 
 /* Авторизация */
@@ -382,4 +393,41 @@ button {
     border-radius: 6px;
     margin-bottom: 20px;
     border-left: 4px solid #d93025;
+    d
 }
+
+
+/* Пагинация */
+.pagination {
+    display: flex;
+    gap: 8px;
+    list-style: none;
+    padding: 0;
+    justify-content: center;
+}
+
+.page-item {
+    display: inline-block;
+}
+
+.page-link {
+    display: block;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.page-link:hover {
+    background-color: #bdbdbd;
+}
+
+.page-item.active .page-link {
+    background-color: #313436;
+    color: white;
+    border-color: #313436;
+}
+
+/* Блюдо отдельная страница */
