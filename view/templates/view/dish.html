@@ -11,26 +11,26 @@
         </div>
 
         <!-- Информация о блюде -->
-        <div class="dish-info-section">
+        <div class="dish-info">
             <h1 class="dish-title">{{ menu_item.title }}</h1>
 
-            <div class="dish-price">
+            <div class="price">
                 Цена: {{ menu_item.price }} ₽
             </div>
 
-            <div class="dish-details">
-                <div class="detail-group">
+            <div class="details">
+                <div class="group">
+                    <h3>Описание</h3>
+                    <p class="recipe">{{ menu_item.recipe }}</p>
+                </div>
+
+                <div class="group">
                     <h3>Ингредиенты</h3>
                     <p class="ingredients">{{ menu_item.ingredients }}</p>
                 </div>
-
-                <div class="detail-group">
-                    <h3>Рецепт</h3>
-                    <p class="recipe">{{ menu_item.recipe }}</p>
-                </div>
             </div>
 
-            <div class="back-link">
+            <div class="back">
                 <a href="{% url 'menu' %}">Вернуться к меню</a>
             </div>
         </div>

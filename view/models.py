@@ -5,8 +5,8 @@ from django.contrib.auth.models import User
 class Menu(models.Model):
     title = models.CharField(max_length=100)
     image = models.ImageField(upload_to='images/')
-    recipe = models.CharField(max_length=200)
-    ingredients = models.CharField(max_length=100)
+    recipe = models.CharField(max_length=2000)
+    ingredients = models.CharField(max_length=1000)
     url = models.URLField(blank=True)
     rating = models.IntegerField(default=0, blank=True)
     price = models.DecimalField(max_digits=10, decimal_places=2)

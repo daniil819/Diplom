@@ -22,6 +22,7 @@ body {
 
 }
 
+
 /* Лого */
 .Logo {
     width: 275px;
@@ -42,14 +43,11 @@ body {
 
 }
 
-/* Регистрация */
-
 
 /* Кнопки */
 .butt {
     border: 2px solid rgb(255, 255, 255);
-    box-shadow: 0px 0px 12px -2px rgb(253, 253, 253);
-    background-color: rgb(44, 45, 46);
+
     padding: 15px 32px;
     border-radius: 20px;
     cursor: pointer;
@@ -57,6 +55,7 @@ body {
 }
 
 .butt:hover {
+    box-shadow: 0px 0px 12px -2px rgb(253, 253, 253);
     background: rgb(44, 45, 46);
     transform: translateY(-3px);
     box-shadow: 0 10px 25px white;
@@ -73,7 +72,7 @@ body {
 }
 
 .bio {
-    font-size: 40px;
+    font-size: 30px;
 }
 
 
@@ -393,14 +392,14 @@ button {
     border-radius: 6px;
     margin-bottom: 20px;
     border-left: 4px solid #d93025;
-    d
+
 }
 
 
 /* Пагинация */
 .pagination {
     display: flex;
-    gap: 8px;
+    gap: 10px;
     list-style: none;
     padding: 0;
     justify-content: center;
@@ -412,9 +411,9 @@ button {
 
 .page-link {
     display: block;
-    padding: 8px 16px;
+    padding: 10px 16px;
     text-decoration: none;
-    color: #333;
+    color: #000000;
     border: 1px solid #ddd;
     border-radius: 4px;
     transition: all 0.3s;
@@ -431,3 +430,5 @@ button {
 }
 
 /* Блюдо отдельная страница */
+
+
