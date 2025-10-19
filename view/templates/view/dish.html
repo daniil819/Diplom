@@ -15,7 +15,7 @@
             <h1 class="dish-title">{{ menu_item.title }}</h1>
 
             <div class="price">
-                Цена: {{ menu_item.price }} ₽
+                Цена: {{ menu_item.price|floatformat:0 }} ₽.
             </div>
 
             <div class="details">

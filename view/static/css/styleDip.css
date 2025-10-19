@@ -1,10 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 body {
+    margin: 0;
+    padding: 0;
     font-family: "Roboto", sans-serif;
     background: #ffffff;
-    padding: 0;
-    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+
 }
 
 .center {
@@ -47,7 +53,6 @@ body {
 /* Кнопки */
 .butt {
     border: 2px solid rgb(255, 255, 255);
-
     padding: 15px 32px;
     border-radius: 20px;
     cursor: pointer;
@@ -83,8 +88,10 @@ body {
     padding: 10px;
     border-top: 6px solid #000000;
     box-sizing: border-box;
-
-
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0; 
 }
 
 .Menu .wrap {
@@ -92,14 +99,12 @@ body {
     flex-wrap: wrap;
     justify-content: flex-end;
     align-items: center;
-
 }
 
 .Menu a {
     color: #ffffff;
     font-weight: bold;
     text-decoration: none;
-
 }
 
 .Menu ul {
@@ -107,52 +112,52 @@ body {
     flex-wrap: wrap;
     list-style: none;
     font-size: 20px;
-
-
-
+    margin: 0;
+    padding: 0;
 }
 
 .Menu li {
     margin-left: 40px;
-
-
 }
 
-.wrap img {
-    width: 120px;
-    height: auto;
-    display: flex;
-    align-items: center;
+/* Лого */
+.Logo {
+    width: 275px;
+    height: 150px;
+    margin-left: 80px;
 }
 
+.Logo a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
 
+.Logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.main-content {
+    flex: 1 0 auto; 
+    width: 100%;}
 
 /* Подвал */
 .Footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
     background: rgb(0, 0, 0);
-    padding: 10px;
+    padding: 20px 10px;
     border-top: 6px solid #000000;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-
-
+    width: 100%;
+    flex-shrink: 0;
 }
 
 .Footer .wrap {
-    position: relative;
-    min-height: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
-
-
-
 }
 
 .Footer a {
@@ -162,8 +167,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-decoration: none;
-
 }
 
 .Footer ul {
@@ -171,12 +174,12 @@ body {
     flex-wrap: wrap;
     list-style: none;
     font-size: 20px;
-
+    margin: 0;
+    padding: 0;
 }
 
 .Footer li {
     margin-left: 40px;
-
 }
 
 .wrap img {
@@ -186,36 +189,25 @@ body {
 
 .Social {
     color: #ffffff;
-    margin: 0;
+    margin: 5px 0 0 0;
     font-size: 12px;
-    justify-content: center;
-}
-
-.socialImg {
-    justify-content: center;
-    align-items: center;
-
+    text-align: center;
 }
 
 /* Кнопки социалки */
-
-
-
-
-
 .social_butt {
     background-color: rgb(0, 0, 0);
     padding: 5px 5px;
     border-radius: 100px;
     cursor: pointer;
     transition: all 0.3s ease;
+    border: none;
 }
 
 .social_butt:hover {
     background: rgb(0, 0, 0);
     transform: translateY(-3px);
     box-shadow: 0 10px 25px white;
-    border-color: transparent;
 }
 
 /* Подвал контактная */
@@ -227,8 +219,6 @@ body {
     margin-left: 0;
     padding: 0 20px;
     box-sizing: border-box;
-    margin-bottom: 5px;
-
 }
 
 .contact p {
@@ -242,11 +232,12 @@ body {
     text-decoration: none;
     font-size: 14px;
     transition: color 0.3s ease;
-    display: block;
-
-    line-height: 1.4;
     display: inline;
     margin: 0;
+}
+
+.contact a:hover {
+    color: #004499;
 }
 
 
@@ -430,5 +421,115 @@ button {
 }
 
 /* Блюдо отдельная страница */
+.dish-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.dish-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    min-height: 500px;
+}
+
+.dish-image-section {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8f9fa;
+}
+
+.dish-image {
+    width: 100%;
+    height: 100%;
+    min-height: 500px;
+    object-fit: cover;
+    display: block;
+}
 
 
+.dish-info {
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+
+.dish-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #2d3748;
+    margin: 0;
+    line-height: 1.2;
+}
+
+
+.price {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #e53e3e;
+    background: #fff5f5;
+    padding: 8px 16px;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+
+.details {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+
+.group h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.group p {
+    color: #4a5568;
+    line-height: 1.7;
+    margin: 0;
+    font-size: 1.05rem;
+}
+
+.back {
+    margin-top: auto;
+    padding-top: 20px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.back a {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #4299e1;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    border: 2px solid #4299e1;
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+
+.back a:hover {
+    color: white;
+    background: #4299e1;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(66, 153, 225, 0.3);
+}

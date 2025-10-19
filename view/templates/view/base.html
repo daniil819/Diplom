@@ -30,9 +30,54 @@
     </div>
 </header>
 
-{% block content %}
-{% endblock %}
+<main class="main-content">
+    {% block content %}
+    {% endblock %}
+</main>
 
+<footer>
+    <div class="Footer">
+        <div class="contact">
+            <h3>Информация</h3>
+            <p>Адрес: <a
+                    href="https://yandex.ru/maps/193/voronezh/house/ulitsa_nikitina_25/Z0AYcw5hSkEFQFtrfXR2cnprZg==/?ll=39.591342%2C51.873682&z=17">Россия,
+                Воронеж, ул. Никитина, 25</a></p>
+            <div class="contact-top">
+                <p>Контактный номер: <a class="whatsapp-number" href="https://wa.me/79999998989" target="_blank">
+                </a>
+                    <a class="telegram-number" href="https://t.me/username" target="_blank">
+                    </a>
+                    <a class="phone-number" href="tel:+74951234567">
+                        +7(999)99-89-89
+                    </a></p>
+            </div>
+            <p>Почта: <a href="mailto:info@izyskiproshlogo.com">info@izyskiproshlogo.com</a></p>
+        </div>
 
+        <div class="wrap">
+            <h3 class="Social_nazv">Наши сети</h3>
+            <ul>
+                <li>
+                    <button class="social_butt"><a href="https://t.me/+ZkVWFWmI_483ZDNi"><img class="socialImg"
+                                                                                              src="{% static 'images/telegram.png' %}">
+                    </a></button>
+                    <p class="Social">Telegram</p>
+                </li>
+                <li>
+                    <button class="social_butt"><a href="https://www.youtube.com/@foodtop10"><img class="socialImg"
+                                                                                                  src="{% static 'images/Youtube.png' %}">
+                    </a></button>
+                    <p class="Social">YouTube</p>
+                </li>
+                <li>
+                    <button class="social_butt"><a href=""><img class="socialImg" src="{% static 'images/vk.png' %}">
+                    </a>
+                    </button>
+                    <p class="Social">Вконтакте</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
 </body>
 </html>
