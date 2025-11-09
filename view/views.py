@@ -32,3 +32,7 @@ def personal(request):
     personal_prof = Personal.objects.all()
 
     return render(request, 'view/personal.html', {"personal": personal_prof})
+
+
+def address_view(request):
+    return render(request, 'view/address.html')

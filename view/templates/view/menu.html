@@ -11,7 +11,7 @@
         <div class="menu-content">
             <h3 class="menu-title">{{ item.title }}</h3>
             <p class="menu-recipe">{{ item.recipe|truncatechars:100 }}</p>
-            <p class="rating"><b>Цена:</b> {{ item.price|floatformat:0 }} ₽.</p>
+            <p class="menu-price"><b>Цена:</b> {{ item.price|floatformat:0 }} ₽.</p>
         </div>
     </div>
     {% endfor %}

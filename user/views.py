@@ -5,6 +5,7 @@ from django.contrib.auth import login, logout, authenticate
 from django.db import IntegrityError
 from django.contrib import messages
 import re
+from django.contrib import messages
 
 
 def signup_user(request):

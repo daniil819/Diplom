@@ -1,0 +1,73 @@
+{% extends 'view/base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="address-container">
+    <div class="address-header">
+        <h1 class="address-title">Изыски прошлого</h1>
+        <div class="divider"></div>
+        <p class="address-subtitle">Лучший ресторан города</p>
+    </div>
+
+    <div class="content-wrapper">
+        <div class="map-section">
+            <div class="map-wrapper">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1273.676999872876!2d39.202128709913715!3d51.66284277991382!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x413b2f579a0717db%3A0xf039533ffcea5b7!2z0JDRgtC80L7RgdGE0LXRgNC90YvQuSDQsdCw0YAg0J_QvtC90LXRgdC70L7RgdGM!5e0!3m2!1sru!2sru!4v1760889511091!5m2!1sru!2sru"
+                    width="100%"
+                    height="450"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    class="elegant-map">
+                </iframe>
+            </div>
+        </div>
+
+        <div class="schedule-section">
+            <div class="schedule-card">
+                <div class="card-header">
+                    <h2>Часы работы</h2>
+                </div>
+
+                <div class="schedule-grid">
+                    <div class="day-row">
+                        <span class="day-name">Понедельник</span>
+                        <span class="day-time">12:00 - 23:00</span>
+                    </div>
+                    <div class="day-row">
+                        <span class="day-name">Вторник</span>
+                        <span class="day-time">12:00 - 23:00</span>
+                    </div>
+                    <div class="day-row">
+                        <span class="day-name">Среда</span>
+                        <span class="day-time">12:00 - 23:00</span>
+                    </div>
+                    <div class="day-row">
+                        <span class="day-name">Четверг</span>
+                        <span class="day-time">12:00 - 23:00</span>
+                    </div>
+                    <div class="day-row">
+                        <span class="day-name">Пятница</span>
+                        <span class="day-time">12:00 - 00:00</span>
+                    </div>
+                    <div class="day-row">
+                        <span class="day-name">Суббота</span>
+                        <span class="day-time">12:00 - 00:00</span>
+                    </div>
+                    <div class="day-row">
+                        <span class="day-name">Воскресенье</span>
+                        <span class="day-time">12:00 - 22:00</span>
+                    </div>
+                </div>
+
+                <div class="additional-info">
+                    <p>Ждём в гости</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

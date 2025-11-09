@@ -16,7 +16,7 @@
         <div class="wrap">
             <div>
                 <ul>
-                    <li class="butt"><a href="">Заказать столик</a></li>
+                    <li class="butt"><a href="{% url 'table_booking' %}">Заказать столик</a></li>
                     <li class="butt"><a href="{% url 'menu' %}">Меню</a></li>
                     <li class="butt"><a href="{% url 'personal' %}">Наш персонал</a></li>
                     {% if user.is_authenticated %}
@@ -40,7 +40,7 @@
         <div class="contact">
             <h3>Информация</h3>
             <p>Адрес: <a
-                    href="https://yandex.ru/maps/193/voronezh/house/ulitsa_nikitina_25/Z0AYcw5hSkEFQFtrfXR2cnprZg==/?ll=39.591342%2C51.873682&z=17">Россия,
+                    href="{% url 'address' %}">Россия,
                 Воронеж, ул. Никитина, 25</a></p>
             <div class="contact-top">
                 <p>Контактный номер: <a class="whatsapp-number" href="https://wa.me/79999998989" target="_blank">
@@ -54,8 +54,8 @@
             <p>Почта: <a href="mailto:info@izyskiproshlogo.com">info@izyskiproshlogo.com</a></p>
         </div>
 
-        <div class="wrap">
-            <h3 class="Social_nazv">Наши сети</h3>
+        <div class="social-wrap">
+            <p class="Social_nazv">Наши сети</p>
             <ul>
                 <li>
                     <button class="social_butt"><a href="https://t.me/+ZkVWFWmI_483ZDNi"><img class="socialImg"
