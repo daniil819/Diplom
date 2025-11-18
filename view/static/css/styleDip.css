@@ -264,18 +264,13 @@
 
     .Social_nazv {
         text-align: center;
-        margin-bottom: 15px;
+        margin-bottom: 2px;
         margin-top: 0;
         font-size: 18px;
         font-weight: bold;
         color: white;
         width: 100%;
     }
-
-
-
-
-
 
 
     /* Меню еда */
@@ -788,3 +783,7 @@ label {
     min-width: 120px;
     margin: 0 5px;
 }
+
+
+
+    

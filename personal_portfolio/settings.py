@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'view.apps.ViewConfig',
     'user.apps.UserConfig',
     'Order.apps.OrderConfig',
+    'telebot.apps.TelebotConfig',
 ]
 
 MIDDLEWARE = [

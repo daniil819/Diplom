@@ -4,18 +4,30 @@
 
 <div class="center_pers"><h1>Наши сотрудники!</h1></div>
 
-<div class="column">
-    {% for item in personal %}
-    <div class="personal-card">
-        <img class="personal-image" src="{{ item.image.url }}">
-        <div class="menu-content">
-            <h3 class="job">{{ item.job }}</h3>
+<div class="pagination-wrapper">
+    {% if personal.has_previous %}
+        <a href="?page={{ personal.previous_page_number }}" class="pagination-arrow left">‹</a>
+    {% else %}
+        <span class="pagination-arrow left disabled">‹</span>
+    {% endif %}
 
-            <p class="personal-name">{{ item.name }}</p>
+    <div class="column">
+        {% for item in personal %}
+        <div class="personal-card">
+            <img class="personal-image" src="{{ item.image.url }}">
+            <div class="menu-content">
+                <h3 class="job">{{ item.job }}</h3>
+                <p class="personal-name">{{ item.name }}</p>
+            </div>
         </div>
+        {% endfor %}
     </div>
 
-    {% endfor %}
+    {% if personal.has_next %}
+        <a href="?page={{ personal.next_page_number }}" class="pagination-arrow right">›</a>
+    {% else %}
+        <span class="pagination-arrow right disabled">›</span>
+    {% endif %}
 </div>
 
 {% endblock %}
