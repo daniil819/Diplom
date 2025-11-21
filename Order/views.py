@@ -6,7 +6,7 @@ from telebot.sendmessage import send_telegram
 
 def table_booking(request):
     if not request.user.is_authenticated:
-        messages.warning(request, 'Чтобы забронировать столик, пожалуйста, зарегистрируйтесь или войдите в систему.')
+        messages.warning(request, 'Чтобы забронировать столик, пожалуйста, зарегистрируйтесь или авторизуйтесь.')
         return render(request, 'Order/table_booking.html')
 
     if request.method == 'POST':

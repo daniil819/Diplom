@@ -5,12 +5,6 @@
 <div class="center_pers"><h1>Наши сотрудники!</h1></div>
 
 <div class="pagination-wrapper">
-    {% if personal.has_previous %}
-        <a href="?page={{ personal.previous_page_number }}" class="pagination-arrow left">‹</a>
-    {% else %}
-        <span class="pagination-arrow left disabled">‹</span>
-    {% endif %}
-
     <div class="column">
         {% for item in personal %}
         <div class="personal-card">
@@ -22,12 +16,6 @@
         </div>
         {% endfor %}
     </div>
-
-    {% if personal.has_next %}
-        <a href="?page={{ personal.next_page_number }}" class="pagination-arrow right">›</a>
-    {% else %}
-        <span class="pagination-arrow right disabled">›</span>
-    {% endif %}
 </div>
 
 {% endblock %}

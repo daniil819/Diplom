@@ -18,17 +18,20 @@
             <input type="text" name="username" id="username" value="{{ username }}" required>
         </p>
         <p class="rg">
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" value="{{ email }}" required>
+        </p>
+        <p class="rg">
+            <label for="telefon">Номер телефона</label>
+            <input type="tel" name="telefon" id="telefon" value="{{ telefon }}" placeholder="+7 (XXX)-XXX-XX-XX">
+        </p>
+        <p class="rg">
             <label for="password1">Пароль:</label>
             <input type="password" name="password1" id="password1" required>
         </p>
         <p class="rg">
             <label for="password2">Подтверждение пароля:</label>
             <input type="password" name="password2" id="password2" required>
-        </p>
-
-        <p class="rg">
-            <label for="telefon">Номер телефона</label>
-            <input type="tel" name="telefon" id="telefon" placeholder="+7xxxxxxxxxx"> <!-- Добавлено name -->
         </p>
 
         <button>Зарегистрироваться</button>
