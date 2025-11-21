@@ -237,10 +237,16 @@
         font-family: Arial, sans-serif;
         text-align: left;
         color: #ffffff;
-        width: 50%;
+        width: auto;
         margin-left: 0;
         padding: 0 20px;
         box-sizing: border-box;
+    }
+
+    #Info {
+        text-align: center;
+        width: auto;
+        margin-top: 10px;
     }
 
     .contact p {
@@ -271,6 +277,7 @@
         color: white;
         width: 100%;
     }
+
 
 
     /* Меню еда */
